@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-bar{
+            display: flex;
+            flex-flow:row wrap;
+            width: 100%;
+            height:90px;
+            box-shadow: 3px 3px 10px lightslategray;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+            ul.menu{
+        flex: 1;
+        display: flex;
+        flex-flow: row wrap;
+        }
+    .menu li{
+        flex: 1;
+        list-style-type: none;
+        font-size: 16px;
+        font-family: "Barlow Condensed";
+        text-align: center;
+     }
+     .menu li a{
+        text-decoration: none;
+    
+        text-transform: uppercase;
+     }
+     .menu li a:hover{
+        color:midnightblue;
+        text-decoration: underline;
+        }
+
+        .logo{
+    flex: 1;
+    font-size: 40px;
+    padding: 20px;
+    margin-left: 50px;
+    font-family: satisfy;
+    color: black;
+}
+
+.linkstop{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+
+.about {
+    margin-top: 8%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-img img{
+    width: 500px;
+    height: 700px;
+    box-shadow: 2px 2px 6px 0 rgba(0 , 0, 0, 0.3);
+}
+
+.about-text {
+    flex: 1;
+    /*width:100px;*/
+    display: flex;
+    flex-flow: column wrap;
+}
+.about-text small,
+.about-text p,
+.about-text input,
+.about-text a{
+    flex: 1;
+    font-family: 'Roboto';
+}
+.about-text small{
+    color: #FFC342;
+    font-size: 18px;
+}
+.about-text h2{
+    flex: 1;
+    font-family: 'Barlow Condensed';
+    font-size: 60px;
+    color: #191D34;
+    width: 450px;
+}
+.about-text label{
+    padding-bottom: 10px;
+    color: #506172;
+    font-weight: bolder;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+}
+.about-text p{
+    width: 500px;
+    line-height: 30px;
+    color: #506172;
+    font-weight: bolder;
+    padding: 50px 0;
+}
+.about-text a{
+    background-color: #fff;
+    border: 2px solid #014B85;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 180px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: #014B85;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.about-text a:hover{
+    background-color: #014B85;
+    color: #fff;
+}
+
+.footer {
+    background-image: url(the-world-famous-cape.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 670px;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer::before{
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: rgba(0, 0, 36, 0.86);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.footer .links {
+    position: relative;
+    color: #fff;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.links ul{
+    list-style-type: none;
+}
+.links h3 {
+    font-family: 'Barlow condensed';
+    font-weight: normal;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.links li{
+    font-family: 'Roboto';
+    cursor: pointer;
+    padding: 15px 0;
+}
+.links li :hover{
+    color: #FFA801;
+}
+    </style>
+</head>
+<body>
+  
+    <header>
+        <section class="nav-bar">
+            
+            <div class="logo">Go Trip</div>
+            <ul class="menu">
+            <li><a class="linkstop" href="./index.html">home</a></li>
+            <li><a class="linkstop" href="./TOURS.HTML">tours</a></li>
+            <li><a class="linkstop" href="./BLOGS.HTML">blogs</a></li>
+            <li><a class="linkstop" href="./ABOUT US.html">about us</a></li>
+            <li><a class="linkstop" href="./CONTACT US.html">contact us</a></li>
+        </ul>
+        </section>
+        </header>
+
+        
+        <section class="about">
+            <div class="about-img">
+                <img src="visit-at-kakum7.jpg" alt="">
+            </div>
+
+            <div class="about-text">
+                <small>ABOUT OUR TOURIST WEBSITE</small>
+                <h2>We are Go Trip Support Tourist</h2>
+                <p>Trip Support Tourist is your premier destination for unforgettable travel experience. We're passionate about curating unique journeys that cater to every traveler's desires.</p>
+
+                <label><input type="checkbox">More Info about our company</label>
+                <label><input type="checkbox">Like what you see about our company</label>
+                <label><input type="checkbox">Do you like Our service?</label>
+                <label><input type="checkbox">Tell us more about how you like our website</label>
+            </div>
+        </section>
+
+
+        
+        <div class="footer">
+            <div class="links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>Offers & Discounts</li>
+                    <li>Get Coupon</li>
+                    <li>Contact Us</li>
+                    <li>About</li>
+                </ul>
+                </div>
+                <div class="links">
+                    <h3>New Products</h3>
+                    <ul>
+                    <li>Woman Cloths</li>
+                    <li>Fashion Accessories</li>
+                    <li>Men Accessories</li>
+                    <li>Rubber Made Toys</li>
+                    </ul>
+                </div>
+
+                <div class="links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li>Frequently asked Questions </li>
+                        <li>Report a Payment Issue</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Website</title>
+    <style>
+        body{
+            color: black;
+            background-color: white;
+        }
+        body, html{
+            margin: 0;
+            padding: 0;
+        }
+
+        h1{
+            color: black;
+            top:50px
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        header{
+            color: black;
+            align-items: center;
+        }
+        ::-webkit-scrollbar{
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: #fde65e;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover{
+            background-color: #FDE02F;
+        }
+    ul.menu{
+        flex: 1;
+        display: flex;
+        flex-flow: row wrap;
+        }
+    .menu li{
+        flex: 1;
+        list-style-type: none;
+        font-size: 16px;
+        font-family: "Barlow Condensed";
+        text-align: center;
+     }
+     .menu li a{
+        text-decoration: none;
+    
+        text-transform: uppercase;
+     }
+     .menu li a:hover{
+        color:midnightblue;
+        text-decoration: underline;
+     }
+    h1{
+        text-align: center;
+    }
+    .nav-bar{
+        display: flex;
+        flex-flow:row wrap;
+        width: 100%;
+        height:90px;
+        box-shadow: 3px 3px 10px lightslategray;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .banner{
+        background-image: url('image2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner::before{
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        bottom:0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    .banner-text-item{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-heading{
+        flex: 1;
+    }
+    .banner-heading h2 {
+        font-size: 100px;
+        font-weight: normal;
+        color: #fde02f;
+        font-family: satisfy;
+    }  
+    .banner-text-item .form {
+        flex: 1 ;
+        display: flex;
+        flex-flow: row wrap ;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        width: 50%;
+        padding: 1% 2%;
+    }  
+    .banner-text-item input,
+    .banner-text-item .date,
+    .banner-text-item .book {
+        padding: 15px;
+        margin-right: 10px;
+        font-size: 18px;
+        font-family: Roboto;
+        border-radius: 5px;
+        outline: 0;
+        border: none;
+    }       
+    .banner-text-item input {
+        width: 50%;
+        flex: 2;
+    }   
+    .banner-text-item .date{
+        width: 20%;
+        flex: 1;
+    }       
+    .banner-text-item .book{
+        width: 20%;
+        flex: 1;
+    }        
+    .banner-text-item .book{
+        text-decoration: none;
+        color: #000;
+        text-transform: uppercase;
+        padding: 15px;
+        cursor: pointer;
+        background-color: #fde02f;
+        font-size: 16px;
+        font-weight: normal;
+        font-family: "Barlow Condensed";
+        width: 20%;
+    }                                                                                                                                                                             
+.logo{
+    flex: 1;
+    font-size: 40px;
+    padding: 20px;
+    margin-left: 50px;
+    font-family: satisfy;
+    color: black;
+}
+ .linkstop{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.footer {
+    background-image: url(the-world-famous-cape.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 670px;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer::before{
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: rgba(0, 0, 36, 0.86);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.footer .links {
+    position: relative;
+    color: #fff;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.links ul{
+    list-style-type: none;
+}
+.links h3 {
+    font-family: 'Barlow condensed';
+    font-weight: normal;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.links li{
+    font-family: 'Roboto';
+    cursor: pointer;
+    padding: 15px 0;
+}
+.links li :hover{
+    color: #FFA801;
+}
+
+@media all and (max-width:1172px){
+    .banner-text-item .form {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .banner-text-item .form input,
+    .banner-text-item .form .date,
+    .banner-text-item .form a {
+        flex: 1;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    .banner-text-item .form input {
+        width: 60%;
+    }
+    .banner-text-item .form .date{
+        width: 30%;
+    }
+    .banner-text-item .form .book{
+        width: 10%;
+        font-size: 14px;
+    }
+    .banner-text-item h1 {
+        font-size: 60px;
+    }
+}
+
+@media all and (max-width: 1414px) {
+    .banner-text-item .form input {
+        width: 40%;
+    }
+    .banner-text-item .form .date {
+        width: 30%;
+        }
+        .banner-text-item .form .book {
+            width: 20%;
+            font-size: 14px;
+        }
+}
+
+@media all and(max-width: 942px) {
+    .nav-bar{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        position: static;
+    }
+    .logo {
+        flex: 1;
+        font-size: 30px;
+        margin: 10px auto;
+        font-family: 'satisfy';
+        color: #FDE02F;
+    }
+    .nav-bar ul{
+        display: none;
+    }
+    .nav-bar ul li{
+        flex:1;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    .service {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .service .service-item{
+        flex: 1;
+        margin-bottom: -130px;
+        width: 400px;
+    }
+    .place-text{
+        margin-top: 200px;
+    }
+}
+
+@media all and (max-width: 928px) {
+    .banner .form input, a {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 1173px) {
+    .banner .form{
+     background-color: transparent;   
+    }
+}
+
+@media all and (max-width: 1194px) {
+    .places .card-box p{
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 1086px) {
+    .places .cards .text {
+        line-height: 40px;
+    }
+    .cards .text .h2{
+        font-size: 12px;
+    }
+    .cards img-card img{
+        height: 260px;
+    }
+}
+
+@media all and (max-width:974px) {
+    .cards{
+        display: 'grip';
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+    .card {
+        width: 300px;
+        height: 500px;
+        margin: auto;
+    }
+    .cards{
+        padding: 5px;
+        font-family: 'Barlow Condensed';
+    }
+}
+
+@media all and (max-width: 1334px){
+    .about-img img{
+        width: 300px;
+        height: 500px;
+    }
+}
+
+@media all and( max-width:1116px){
+    .about{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-img{
+        flex: 1;
+        margin-bottom: 20px;
+    }
+    .about-text {
+        flex: 1;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-text h2{
+        font-size: 35px;
+    }
+    .about-img img{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media all and (max-width: 708px){
+    .footer{
+        width: 100%;
+        height: 670px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <section class="nav-bar">
+            <div class="logo">Go Trip</div>
+            <ul class="menu">
+            <li><a class="linkstop" href="./index.html">home</a></li>
+            <li><a class="linkstop" href="./TOURS.HTML">tours</a></li>
+            <li><a class="linkstop" href="./BLOGS.HTML">blogs</a></li>
+            <li><a class="linkstop" href="./ABOUT US.html">about us</a></li>
+            <li><a class="linkstop" href="./ABOUT US.html">contact us</a></li>
+        </ul>
+        </section>
+        </header>
+
+    <section class="banner">
+        <div class="banner-text-item">
+            <div class="banner-heading">
+                <h1 style="color: white;">WELCOME TO MY TOURIST WEBSITE</h1>
+                <h2>Find Your Next Tour!</h2>
+                </div>
+        <form class="form">
+            <input type="text" list="mylist" placeholder="Where Would you like to go?">
+            <datalist id="mylist">
+                <option>Kakum National Park</option>
+                <option>Cape Coast Castle</option>
+                <option>Wli Agumasta</option>
+                <option>Kwame Nkrumah Memorial Park And Mausoleum</option>
+                <option>Mole National Park</option>
+            </datalist>
+            <input type="date" id="date" name="date">
+            <a href="./TOURS.HTML" class="book">book</a>
+        </form>
+       
+        
+        
+        
+</body>
+</html>
